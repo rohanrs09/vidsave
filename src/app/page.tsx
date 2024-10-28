@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-center mb-8">
           YouTube Downloader
         </h1>
-        <div className="space-y-8">
+        <div className="space-y-8 text-black">
           <DownloadForm />
           <DownloadHistory />
         </div>
