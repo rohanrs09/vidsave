@@ -1,8 +1,12 @@
 // src/lib/youtube.ts
 import ytdl from 'ytdl-core';
 
+
 export async function getVideoInfo(url: string) {
   try {
+    if (!ytdl.validateURL(url)) {
+      throw new Error('Invalid YouTube URL');
+    }
     const info = await ytdl.getInfo(url);
     return {
       title: info.videoDetails.title,
